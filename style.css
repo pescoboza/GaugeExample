@@ -1,0 +1,26 @@
+* {
+    font-family: "Helvetica";
+}
+
+
+.sensors {
+    background-color: F3F3F3;
+}
+
+#title {
+    text-align: center;
+    margin: 16px 16px;
+
+}
+
+#top-rect {
+    display: block;
+    background-color: 6B6B6B;
+    height: 10%;
+}
+
+.sensor-card {
+    background-color: f4f4f4;
+    text-align: center;
+    min-height: 600px;
+}

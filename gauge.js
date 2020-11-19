@@ -16,10 +16,18 @@ let opts = {
     highDpiSupport: true, // High resolution support
 };
 
-let target = document.querySelector("#gauge"); // your canvas element
+function gaugeWithId(id, set = 1250, max = 3000, min = 0, animSpd = 32) {
+    let target = document.querySelector(id); // your canvas element
 
-let gaugeChart = new Gauge(target).setOptions(opts); // create sexy gauge!
-gaugeChart.maxValue = 3000; // set max gauge value
-gaugeChart.setMinValue(0); // Prefer setter over gauge.minValue = 0
-gaugeChart.animationSpeed = 32; // set animation speed (32 is default value)
-gaugeChart.set(1250); // set actual value
+    let gaugeChart = new Gauge(target).setOptions(opts); // create sexy gauge!
+    gaugeChart.maxValue = max; // set max gauge value
+    gaugeChart.setMinValue(min); // Prefer setter over gauge.minValue = 0
+    gaugeChart.animationSpeed = animSpd; // set animation speed (32 is default value)
+    gaugeChart.set(set); // set actual value
+}
+
+gaugeWithId("#gauge-1", 800);
+gaugeWithId("#gauge-2", 1250);
+gaugeWithId("#gauge-3", 1950);
+
+while (true) {}
